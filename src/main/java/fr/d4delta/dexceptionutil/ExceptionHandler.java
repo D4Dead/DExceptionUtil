@@ -1,4 +1,4 @@
-package fr.d4death.exceptionmanager;
+package fr.d4delta.dexceptionutil;
 
 public interface ExceptionHandler {
 

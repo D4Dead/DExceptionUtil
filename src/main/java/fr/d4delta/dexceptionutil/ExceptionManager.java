@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package fr.d4death.exceptionmanager;
+package fr.d4delta.dexceptionutil;
 
 import java.io.BufferedWriter;
 import java.io.File;
