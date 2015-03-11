@@ -23,11 +23,11 @@ public class ExceptionManager implements ExceptionHandler {
     
     
     @Override
-    public void handle(Exception e) {
+    public void handle(Throwable e) {
         handleWithMsg(e, "Something wrong hapenned ! " + System.lineSeparator() + "Here's the full stacktrace:");
     }
     
-    public void handleWithMsg(Exception e, String msg) {
+    public void handleWithMsg(Throwable e, String msg) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         e.printStackTrace(pw);
@@ -35,13 +35,7 @@ public class ExceptionManager implements ExceptionHandler {
         String logPath;
         JOptionPane.showMessageDialog(null, msg + System.lineSeparator() + sw + System.lineSeparator() + writeLog(sw.toString()));
     }
-    
-    //Only for some very, very old project 
-    @Deprecated
-    public void showAndSave(Throwable e) {
-        handle((Exception) e);
-    }
-    
+   
     private String writeLog(String text) {
         
         BufferedWriter writer = null;
